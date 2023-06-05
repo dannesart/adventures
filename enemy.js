@@ -13,8 +13,6 @@ class Enemy {
   __speed = 10;
   __lifes = 5;
   __isDead = false;
-  __facing = "right";
-  __facingStyle = "3px solid red";
   __updateFacing = (x, y) => {
     this.__characterElement.style.borderBottom = "";
     this.__characterElement.style.borderTop = "";
@@ -22,21 +20,20 @@ class Enemy {
     this.__characterElement.style.borderRight = "";
     if (x != this.__position.x) {
       if (x > this.__position.x) {
-        this.__facing = "right";
-        this.__characterElement.style.borderRight = this.__facingStyle;
+        // this.__facing = "right";
+        // this.__characterElement.style.borderRight = this.__facingStyle;
       } else {
-        this.__facing = "left";
-        this.__characterElement.style.borderLeft = this.__facingStyle;
+        // this.__facing = "left";
+        // this.__characterElement.style.borderLeft = this.__facingStyle;
       }
     }
     if (y != this.__position.y) {
       if (y > this.__position.y) {
-        this.__facing = "down";
-        this.__characterElement.style.borderBottom = this.__facingStyle;
+        // this.__facing = "down";
+        // this.__characterElement.style.borderBottom = this.__facingStyle;
       } else {
-        this.__facing = "up";
-
-        this.__characterElement.style.borderTop = this.__facingStyle;
+        // this.__facing = "up";
+        // this.__characterElement.style.borderTop = this.__facingStyle;
       }
     }
   };

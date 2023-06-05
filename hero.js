@@ -1,4 +1,4 @@
-class Character {
+class Hero {
   __ID;
   __characterInfo = {};
   __basicStyles = {
@@ -9,6 +9,7 @@ class Character {
     "border-radius": "100px",
     "box-shadow": "0px 5px 10px #aaa",
   };
+  __healthBar;
   __characterElement;
   __reach = 30;
   __movements;
@@ -99,9 +100,10 @@ class Character {
     this.__setPosition(x, y);
   };
 
-  constructor() {
+  constructor(healthBar) {
+    this.__healthBar = healthBar;
     this.__initiate();
   }
 }
 
-export { Character };
+export { Hero };

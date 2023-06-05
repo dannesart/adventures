@@ -1,18 +1,16 @@
 class Map {
-  __mapID = "game";
+  __gameBoard;
   __mapSize;
-  __mapElement;
 
   __build = () => {
-    this.__mapElement = document.getElementById(this.__mapID);
     this.__mapSize = {
-      h: this.__mapElement.offsetHeight,
-      w: this.__mapElement.offsetWidth,
+      h: this.__gameBoard.offsetHeight,
+      w: this.__gameBoard.offsetWidth,
     };
   };
 
   __getMap = () => {
-    return document.getElementById(this.__mapID);
+    return this.__gameBoard;
   };
 
   __clear = () => {
@@ -33,7 +31,8 @@ class Map {
     map.appendChild(unit);
   };
 
-  constructor() {
+  constructor(gameBoard) {
+    this.__gameBoard = gameBoard;
     this.__build();
     this.__clear();
   }
